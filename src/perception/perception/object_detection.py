@@ -7,7 +7,7 @@ from sensor_msgs.msg import Image
 from robot_interface.msg import DetectionArray, Detection
 
 import time
-from shm_bridge import ShmFrameWriter, ShmDetReader
+from perception.shm_bridge import ShmFrameWriter, ShmDetReader
 
 STALENESS_MS = 50.0
 

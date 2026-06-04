@@ -3,24 +3,27 @@ from rclpy.node import Node
 
 from robot_interface.msg import WaypointBatch, UpdateWaypoint, Return, Estop, ActiveWaypoint, Status, DetectionArray, TargetSetter, GripperCmd, EncoderFeedback
 
-from sensor_msgs.msg import Odometry
+from nav_msgs.msg import Odometry
 
 from enum import Enum
 
 import math
 import time
 
-ARRIVAL_RADIUS_M = 0.05
-DOCK_THRESHOLD_M = 0.03
+
 GRIPPER_MAX_DIST = 0.5
 GRIPPER_MIN_RAD = 0.0
 GRIPPER_MAX_RAD = math.pi
 GRIPPER_TIMEOUT_S = 5.0
+
 NAV_WAYPOINT_TIMEOUT_S = 60.0
 NAV_STUCK_TIMEOUT_S = 5.0
 NAV_STUCK_DIST_M = 0.05
+ARRIVAL_RADIUS_M = 0.05
+
 DOCK_TIMEOUT_S = 30.0
 DOCK_DIVERGE_MARGIN_M = 0.05
+DOCK_THRESHOLD_M = 0.03
 
 CAM_X_OFFSET_M = 0.0 
 CAM_Y_OFFSET_M = 0.0

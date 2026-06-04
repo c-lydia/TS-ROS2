@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 import can
-from robot_interface.msg import EncoderFeedback, MotorCommand, ServoCommand, PwmCommand, DigitalAndSolenoidCommand, DigitalAndAnalogFeedback
+from robot_interface.msg import EncoderFeedback, MotorCommand, DigitalAndSolenoidCommand
 import struct
 import subprocess
 import array

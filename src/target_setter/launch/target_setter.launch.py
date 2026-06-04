@@ -28,7 +28,7 @@ def generate_launch_description():
             name = 'hfi_a9_node'
         ),
         Node(
-            pacakge = 'hardware_interface',
+            package = 'hardware_interface',
             namespace = 'inverse_kinematic',
             executable = 'inverse_kinematic_node',
             name = 'inverse_kinematic_node'

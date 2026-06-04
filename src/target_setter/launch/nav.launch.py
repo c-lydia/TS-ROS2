@@ -10,7 +10,7 @@ def generate_launch_description():
             name = 'udp_listener_node'
         ),
         Node(
-            pacakge = 'communication',
+            package = 'communication',
             namespace = 'sender',
             executable = 'udp_sender_node',
             name = 'udp_sender_node'

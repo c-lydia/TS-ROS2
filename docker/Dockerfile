@@ -1,4 +1,6 @@
-FROM nvcr.io/nvidia/l4t-pytorch:r35.4.1-pth2.1-py3
+ARG BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r35.2.1-pth2.0-py3
+
+FROM ${BASE_IMAGE}
 
 WORKDIR /workspace 
 
@@ -18,6 +20,5 @@ RUN pip install --no-cache-dir \
 RUN pip install --no-cache-dir -r requirements_jetson.txt
 
 COPY src/perception/perception/ /workspace/perception/
-COPY models/ /workspace/models/
 
 CMD ["python3", "/workspace/perception/inference_runner.py"]
